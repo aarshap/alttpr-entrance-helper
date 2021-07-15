@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+@import url("https://use.typekit.net/kns4uoi.css");
+
+body {
+  background-color: #1C1C1C;
+  color: #FFFFFF;
+  font-family: paralucent, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.3;
+  padding: 2em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0 0 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button-group {
+  border-radius: 0.25em;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5em;
+  max-width: 16em;
+  overflow: hidden;
+  user-select: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button-group:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.App-link {
-  color: #61dafb;
+.button-group:last-child {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-group.connectors .connector-indicator.undiscovered {
+  background-color: #6EA1F8;
+}
+
+.button-group.dungeons .connector-indicator.undiscovered {
+  background-color: #F9BD62;
+}
+
+.button-group.dropdowns svg.incomplete {
+  fill: #F86E6E;
+}
+
+.button-group.item-locations svg.incomplete {
+  fill: #6EF874;
+}
+
+button {
+  background-color: #242424;
+  border: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: inherit;
+  height: 4.25em;
+  padding: 0.5em;
+  position: relative;
+  transition: all 0.1s linear;
+  width: 4em;
+}
+
+button:hover {
+  background-image: linear-gradient(#242424, #333333);
+}
+
+button:active {
+  background-image: none;
+}
+
+button.incomplete {
+  color: #FFFFFF;
+}
+
+button.complete {
+  color: #666666;
+}
+
+.label {
+  font-size: 0.75em;
+  position: absolute;
+    top: 0.75em;
+    right: 0.5em;
+    left: 0.5em;
+}
+
+.icon {
+  position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+    left: 0.5em;
+}
+
+.connector-indicator {
+  border-radius: 1px;
+  display: inline-block;
+  margin-right: 0.25em;
+  height: 1em;
+  width: 0.25em;
+}
+
+.connector-indicator:last-child {
+  margin-right: 0;
+}
+
+.connector-indicator.discovered {
+  background-color: #444444;
+}
+
+.visibility-indicator {
+  height: 1em;
+}
+
+.visibility-indicator.complete {
+  fill: #444444;
 }
