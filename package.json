@@ -1,8 +1,7 @@
 {
   "name": "alttpr-entrance-helper",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://aarshap.github.io/alttpr-entrance-tracker",
+  "homepage": "https://aaron.mn/alttpr-entrance-helper",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
