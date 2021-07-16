@@ -1,5 +1,6 @@
 import './App.css';
 import Connector from './components/Connector'
+import Footer from './components/Footer'
 import Location from './components/Location'
 
 function App() {
@@ -82,7 +83,7 @@ function App() {
 
             </main>
 
-            <footer>An <a href="https://alttpr.com">ALTTPR</a> entrance randomizer tool by your friend <a href="https://twitch.tv/okayaaron">Aaron</a></footer>
+            <Footer />
 
         </div>
     )

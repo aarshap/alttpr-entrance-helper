@@ -148,6 +148,19 @@ button.complete {
 }
 
 footer {
+  align-items: center;
   color: #777777;
+  display: flex;
   font-size: 0.75em;
+}
+
+footer svg {
+  display: block;
+  fill: #777777;
+  margin-right: 0.75em;
+}
+
+footer span {
+  position: relative;
+  top: 2px;
 }
