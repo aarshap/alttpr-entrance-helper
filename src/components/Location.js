@@ -65,7 +65,11 @@ export default (props) => {
                 }
                 {status == 3 &&
                     <svg className="visibility-indicator incomplete" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 16H16L8 0L0 16Z" />
+                        <path d="M5 16H0L2 12H5V16Z" />
+                        <path d="M7 16H16L14 12H7V16Z" />
+                        <path d="M13 10L11.5 7H9V10H13Z" />
+                        <path d="M10.5 5L8 0L5.5 5H10.5Z" />
+                        <path d="M4.5 7L3 10H7V7H4.5Z" />
                     </svg>
                 }
             </div>
