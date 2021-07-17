@@ -50,37 +50,53 @@ function App() {
 
             <main>
 
-                <h2>Entrance connectors</h2>
+                <section>
 
-                <div className="button-group connectors">
-                    {connectors.map((connector, i) =>
-                        <Connector label={connector.label} count={connector.count} key={i} />
-                    )}
-                </div>
+                    <h2>Entrance connectors</h2>
 
-                <h2>Dungeon connectors</h2>
+                    <div className="button-group connectors">
+                        {connectors.map((connector, i) =>
+                            <Connector label={connector.label} count={connector.count} key={i} />
+                        )}
+                    </div>
 
-                <div className="button-group dungeons">
-                    {dungeons.map((dungeon, i) =>
-                        <Connector label={dungeon.label} count={dungeon.count} key={i} />
-                    )}
-                </div>
+                </section>
 
-                <h2>Dropdowns</h2>
+                <section>
 
-                <div className="button-group dropdowns">
-                    {dropdowns.map((dropdown, i) =>
-                        <Location type="dropdown" label={dropdown.label} key={i} />
-                    )}
-                </div>
+                    <h2>Dungeon connectors</h2>
 
-                <h2>High value item locations</h2>
+                    <div className="button-group dungeons">
+                        {dungeons.map((dungeon, i) =>
+                            <Connector label={dungeon.label} count={dungeon.count} key={i} />
+                        )}
+                    </div>
 
-                <div className="button-group item-locations">
-                    {itemLocations.map((location, i) =>
-                        <Location label={location.label} key={i} />
-                    )}
-                </div>
+                </section>
+
+                <section>
+
+                    <h2>Dropdowns</h2>
+
+                    <div className="button-group dropdowns">
+                        {dropdowns.map((dropdown, i) =>
+                            <Location type="dropdown" label={dropdown.label} key={i} />
+                        )}
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h2>High value item locations</h2>
+
+                    <div className="button-group item-locations">
+                        {itemLocations.map((location, i) =>
+                            <Location label={location.label} key={i} />
+                        )}
+                    </div>
+
+                </section>
 
             </main>
 

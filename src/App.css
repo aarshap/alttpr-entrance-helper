@@ -34,9 +34,8 @@ main {
   flex-grow: 1;
 }
 
-footer {
-  margin-top: 4em;
-  flex-shrink: 0;
+section {
+  margin-bottom: 1.5em;
 }
 
 .button-group {
@@ -45,7 +44,6 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: inline-flex;
   flex-wrap: wrap;
-  margin-bottom: 1.5em;
   max-width: 16em;
   overflow: hidden;
   user-select: none;
@@ -151,7 +149,9 @@ footer {
   align-items: center;
   color: #777777;
   display: flex;
+  flex-shrink: 0;
   font-size: 0.75em;
+  margin-top: 4em;
 }
 
 footer svg {
