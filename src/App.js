@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css';
 import Connector from './components/Connector'
 import Footer from './components/Footer'
