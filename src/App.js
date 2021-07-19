@@ -1,4 +1,5 @@
 import React from 'react'
+import { MotionConfig } from 'framer-motion';
 import './App.css';
 import Category from './components/Category'
 import Connector from './components/Connector'
@@ -6,6 +7,8 @@ import Footer from './components/Footer'
 import Location from './components/Location'
 
 function App() {
+
+    // Entrance connector data
 
     const connectors = [
         { label: 'Bumper Cave', count: 2 },
@@ -22,11 +25,15 @@ function App() {
         { label: 'Spec. Rock', count: 3 }
     ]
 
+    // Dungeon connector data
+
     const dungeons = [
         { label: 'Desert Palace', count: 3 },
         { label: 'Hyrule Castle', count: 3 },
         { label: 'Turtle Rock', count: 4 },
     ]
+
+    // Dropdown data
 
     const dropdowns = [
         { label: 'Back of Escape' },
@@ -39,6 +46,8 @@ function App() {
         { label: 'Useless Fairy' },
     ]
 
+    // High value item location data
+
     const itemLocations = [
         { label: 'Blind’s Hut' },
         { label: 'Hype Cave' },
@@ -47,47 +56,55 @@ function App() {
     ]
 
     return (
-        <div className="container">
 
-            <main>
+        // Sets all Motion animations in the app to use the "tween" type
 
-                <Category heading="Entrance connectors">
-                    <div className="button-group connectors">
-                        {connectors.map((connector, i) =>
-                            <Connector label={connector.label} count={connector.count} key={i} />
-                        )}
-                    </div>
-                </Category>
+        <MotionConfig transition={{ type: "tween" }}>
 
-                <Category heading="Dungeon connectors">
-                    <div className="button-group dungeons">
-                        {dungeons.map((dungeon, i) =>
-                            <Connector label={dungeon.label} count={dungeon.count} key={i} />
-                        )}
-                    </div>
-                </Category>
+            <div className="container">
 
-                <Category heading="Dropdowns">
-                    <div className="button-group dropdowns">
-                        {dropdowns.map((dropdown, i) =>
-                            <Location type="dropdown" label={dropdown.label} key={i} />
-                        )}
-                    </div>
-                </Category>
+                <main>
 
-                <Category heading="High value item locations">
-                    <div className="button-group item-locations">
-                        {itemLocations.map((location, i) =>
-                            <Location label={location.label} key={i} />
-                        )}
-                    </div>
-                </Category>
+                    <Category heading="Entrance connectors">
+                        <div className="button-group connectors">
+                            {connectors.map((connector, i) =>
+                                <Connector label={connector.label} count={connector.count} key={i} />
+                            )}
+                        </div>
+                    </Category>
 
-            </main>
+                    <Category heading="Dungeon connectors">
+                        <div className="button-group dungeons">
+                            {dungeons.map((dungeon, i) =>
+                                <Connector label={dungeon.label} count={dungeon.count} key={i} />
+                            )}
+                        </div>
+                    </Category>
 
-            <Footer />
+                    <Category heading="Dropdowns">
+                        <div className="button-group dropdowns">
+                            {dropdowns.map((dropdown, i) =>
+                                <Location type="dropdown" label={dropdown.label} key={i} />
+                            )}
+                        </div>
+                    </Category>
 
-        </div>
+                    <Category heading="High value item locations">
+                        <div className="button-group item-locations">
+                            {itemLocations.map((location, i) =>
+                                <Location label={location.label} key={i} />
+                            )}
+                        </div>
+                    </Category>
+
+                </main>
+
+                <Footer />
+
+            </div>
+
+        </MotionConfig>
+
     )
 }
 
