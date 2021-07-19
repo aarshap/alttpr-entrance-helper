@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css';
+import Category from './components/Category'
 import Connector from './components/Connector'
 import Footer from './components/Footer'
 import Location from './components/Location'
@@ -50,53 +51,37 @@ function App() {
 
             <main>
 
-                <section>
-
-                    <h2>Entrance connectors</h2>
-
+                <Category heading="Entrance connectors">
                     <div className="button-group connectors">
                         {connectors.map((connector, i) =>
                             <Connector label={connector.label} count={connector.count} key={i} />
                         )}
                     </div>
+                </Category>
 
-                </section>
-
-                <section>
-
-                    <h2>Dungeon connectors</h2>
-
+                <Category heading="Dungeon connectors">
                     <div className="button-group dungeons">
                         {dungeons.map((dungeon, i) =>
                             <Connector label={dungeon.label} count={dungeon.count} key={i} />
                         )}
                     </div>
+                </Category>
 
-                </section>
-
-                <section>
-
-                    <h2>Dropdowns</h2>
-
+                <Category heading="Dropdowns">
                     <div className="button-group dropdowns">
                         {dropdowns.map((dropdown, i) =>
                             <Location type="dropdown" label={dropdown.label} key={i} />
                         )}
                     </div>
+                </Category>
 
-                </section>
-
-                <section>
-
-                    <h2>High value item locations</h2>
-
+                <Category heading="High value item locations">
                     <div className="button-group item-locations">
                         {itemLocations.map((location, i) =>
                             <Location label={location.label} key={i} />
                         )}
                     </div>
-
-                </section>
+                </Category>
 
             </main>
 

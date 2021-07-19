@@ -11,10 +11,15 @@ body {
 }
 
 h2 {
+  cursor: pointer;
   font-size: 1em;
   font-style: normal;
   font-weight: 700;
-  margin: 0 0 1em;
+  margin: 0;
+  max-width: 16em;
+  position: relative;
+  transition: color 0.1s linear;
+  user-select: none;
 }
 
 a {
@@ -34,8 +39,33 @@ main {
   flex-grow: 1;
 }
 
-section {
+.category {
   margin-bottom: 1.5em;
+}
+
+.category-inner {
+  margin-top: 1em;
+  overflow: hidden;
+}
+
+.category.hidden h2 {
+  color: #777777;
+}
+
+.category.hidden .category-inner {
+  height: 0;
+  margin-top: 0;
+}
+
+.category-visibility-icon {
+  left: -1em;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.1s linear;
+}
+
+h2:hover .category-visibility-icon {
+  opacity: 1;
 }
 
 .button-group {
