@@ -8,8 +8,8 @@ export default (props) => {
 
     // Motion variants for section
     const sectionVariants = {
-        visible: { "margin-bottom": "1em" },
-        hidden: { "margin-bottom": 0 }
+        visible: { "marginBottom": "2em" },
+        hidden: { "marginBottom": 0 }
     }
 
     // Motion variants for .category-inner

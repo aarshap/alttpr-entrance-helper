@@ -65,7 +65,7 @@ function App() {
 
                 <main>
 
-                    <Category heading="Entrance connectors">
+                    <Category heading="Entrance connectors" data={connectors}>
                         <div className="button-group connectors">
                             {connectors.map((connector, i) =>
                                 <Connector label={connector.label} count={connector.count} key={i} />
@@ -73,7 +73,7 @@ function App() {
                         </div>
                     </Category>
 
-                    <Category heading="Dungeon connectors">
+                    <Category heading="Dungeon connectors" data={dungeons}>
                         <div className="button-group dungeons">
                             {dungeons.map((dungeon, i) =>
                                 <Connector label={dungeon.label} count={dungeon.count} key={i} />
@@ -81,7 +81,7 @@ function App() {
                         </div>
                     </Category>
 
-                    <Category heading="Dropdowns">
+                    <Category heading="Dropdowns" data={dropdowns}>
                         <div className="button-group dropdowns">
                             {dropdowns.map((dropdown, i) =>
                                 <Location type="dropdown" label={dropdown.label} key={i} />
@@ -89,7 +89,7 @@ function App() {
                         </div>
                     </Category>
 
-                    <Category heading="High value item locations">
+                    <Category heading="High value item locations" data={itemLocations}>
                         <div className="button-group item-locations">
                             {itemLocations.map((location, i) =>
                                 <Location label={location.label} key={i} />

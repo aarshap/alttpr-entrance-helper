@@ -39,10 +39,6 @@ main {
   flex-grow: 1;
 }
 
-.category {
-  margin-bottom: 1.5em;
-}
-
 .category-inner {
   margin-top: 1em;
   overflow: hidden;
